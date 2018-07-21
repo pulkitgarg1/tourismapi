@@ -1,4 +1,4 @@
-places_list1 = [
+places_list = [
   {
     "city":"Dublin",
     "place_to_visit":[
@@ -10,9 +10,7 @@ places_list1 = [
       "Spire of Dublin",
       "Dublin Zoo",
       "Christ Church Cathedral"
-    ],
-    "package":"3day, 4night",
-    "cost":"200"
+    ]
   },
   {
     "city":"Galway",
@@ -25,9 +23,7 @@ places_list1 = [
       "Dunguaire Castle",
       "Galway City Museum",
       "Galway Cathedral"
-    ],
-    "package":"2 Days 3 Nights",
-    "cost":"200"
+    ] 
   },
   {
     "city":"Cork",
@@ -39,9 +35,7 @@ places_list1 = [
       "Cork Vision Centre",
       "Collins Barracks Cork Military Museum",
       "University College Cork (UCC)"
-    ],
-    "package":"2 Days 3 Nights",
-    "cost":"175"
+    ] 
   },
   {
     "city":"Waterford",
@@ -50,9 +44,7 @@ places_list1 = [
       "The Irish National Heritage Park",
       "Johnstown Castle & Gardens",
       "Kilmore Quay and the Saltee Islands"
-    ],
-    "package":"1 Day 2 Nights",
-    "cost":"220"
+    ] 
   },
   {
     "city":"Kilkenny",
@@ -61,9 +53,7 @@ places_list1 = [
       "Black Abbey",
       "Rothe House",
       "St. Mary’s Medieval Mile Museum"
-    ],
-    "package":"Day Trip",
-    "cost":"90"
+    ] 
   },
   {
     "city":"Athlone",
@@ -74,9 +64,7 @@ places_list1 = [
       "Ss. Peter & Pauls Church",
       "Lough Ree",
       "Athlone Equestrian Centre"
-    ],
-    "package":"Day Trip",
-    "cost":"130"
+    ] 
   },
   {
     "city":"Westport",
@@ -87,9 +75,7 @@ places_list1 = [
       "Nickels-Sortwell House",
       "Fort Edgecomb",
       "Castle Tucker"
-    ],
-    "package":"Daytrip",
-    "cost":"80"
+    ] 
   },
   {
     "city":"Limerick",
@@ -100,9 +86,7 @@ places_list1 = [
       "King's Island",
       "St John's Cathedral",
       "Frank McCourt Museum"
-    ],
-    "package":"1 Day 2 Nights",
-    "cost":"210"
+    ] 
   },
   {
     "city":"Dingle",
@@ -114,9 +98,7 @@ places_list1 = [
       "Dingle Peninsula",
       "St Mary's Catholic Church",
       "Eask Tower"
-    ],
-    "package":"2 Days 2 Nights",
-    "cost":"180"
+    ] 
   },
   {
     "city":"Belfast",
@@ -131,8 +113,6 @@ places_list1 = [
       "Odyssey Arena",
       "St. Georges Market",
       "Grand Opera House"
-    ],
-    "package":"3 Days 4 Nights",
-    "cost":"300"
-  }
+    ] 
+  },
 ]
