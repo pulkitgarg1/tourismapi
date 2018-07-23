@@ -3,7 +3,7 @@ from settings import *
 from ApiModel import *
 import jwt, datetime, json
 from UserModel import User
-from functools import wraps
+#from functools import wraps
 from place import places_list
 
 
@@ -33,7 +33,7 @@ def get_token():
       return token
     else:
       return Response('', 401, mimetype='application/json')
-
+'''
 def token_required(f):
   @wraps(f)
   def wrapper(*args, **kwargs):
@@ -44,7 +44,7 @@ def token_required(f):
     except:
       return jsonify({'error': 'Need a valid token to view this page'})
   return wrapper
-
+'''
 
 def validObject(Object):
     if("city" in Object and "package" in Object and "price" in Object):
