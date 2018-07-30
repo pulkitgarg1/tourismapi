@@ -5,6 +5,7 @@ from settings import app
 import requests 
 
 db = SQLAlchemy(app)
+# link for making the external api call 
 api_address = "http://api.openweathermap.org/data/2.5/weather?appid=818eadb9974a00bfb849ddd5935c8144&q="
 
 class Tourism(db.Model):
@@ -35,21 +36,26 @@ class Tourism(db.Model):
         return weather_temp 
 
 # this Function will add travel packages to the database and fetch temp data from weather Api 
-    def add_travel_package(_city, _package, _price):
+    def add_travel_package(_city, _package, _price, _weather_temp):
         url = api_address+_city
         json_data = requests.get(url).json()
         _weather_condition = json_data["weather"][0]['description']
-        _weather_temp = int((json_data["main"]['temp'])-273.15)
-        new_book = Tourism(city=_city, weather_temp=_weather_temp, weather_condition=_weather_condition, package=_package, price=_price)
-        db.session.add(new_book)
+        #_weather_temp = int((json_data["main"]['temp'])-273.15)
+        new_plan = Tourism(city=_city, weather_temp=_weather_temp, weather_condition=_weather_condition, package=_package, price=_price)
+        db.session.add(new_plan)
         db.session.commit()
-        print(new_book) 
+        print(new_plan) 
 # get all the packages from database
     def get_all_travel_package():
         return [Tourism.json(tourism) for tourism in Tourism.query.all()]
 # get all the packages by the city
     def get_package_by_city(_city):
         return [Tourism.json(Tourism.query.filter_by(city=_city).first())]
+# get ideal temp from the data base
+    def get_temp_by_city(_city):
+        set1 = Tourism.json(Tourism.query.filter_by(city=_city).first())
+        return set1['weather_temp']
+
 #delete entry from database
     def delete_package(_city):
         Tourism.query.filter_by(city=_city).delete()
