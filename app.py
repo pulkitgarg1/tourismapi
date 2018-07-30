@@ -143,4 +143,5 @@ def get_city_package(city):
 
     return jsonify(return_value1, return_value )
 
-app.run(port=5000, debug=True)
+  if __name__ == '__main__':
+  app.run()
