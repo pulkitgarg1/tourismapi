@@ -1,15 +1,10 @@
 Flask==1.0.2
-Flask-Bootstrap==3.3.7.1
-Flask-Cors==3.0.4
 Flask-RESTful==0.3.6
-flask-restful-swagger==0.20.1
-flask-restplus==0.11.0
 Flask-SQLAlchemy==2.3.2
 gunicorn==19.9.0
-ipython-genutils==0.2.0
-Jinja2==2.10
 jsonschema==2.6.0
-PyJWT==1.6.4
+Jinja2==2.10
 SQLAlchemy==1.2.7
 urllib3==1.22
 requests==2.18.4
+Jinja2==2.10
