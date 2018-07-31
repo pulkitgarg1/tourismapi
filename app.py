@@ -3,7 +3,7 @@ from settings import *
 from ApiModel import *
 import jwt, datetime, json
 from UserModel import User
-#from functools import wraps
+from functools import wraps
 from place import places_list
 
 
@@ -30,7 +30,6 @@ def get_token():
       token = jwt.encode({'exp': expiration_date}, app.config['SECRET_KEY'], algorithm='HS256')
       return token
     else:
-<<<<<<< HEAD
 
       #return Response('', 401, mimetype='application/json')
       invalidUser = {
@@ -40,10 +39,6 @@ def get_token():
       response = Response(json.dumps(invalidUser), status=401, mimetype='application/json')
       return response
 # token Required function 
-=======
-      return Response('', 401, mimetype='application/json')
-'''
->>>>>>> 5830c2198c627f5e292e6e271765a050192a8ba2
 def token_required(f):
   @wraps(f)
   def wrapper(*args, **kwargs):
@@ -54,13 +49,8 @@ def token_required(f):
     except:
       return jsonify({'error': 'Need a valid token to view this page'})
   return wrapper
-<<<<<<< HEAD
 
 #check if the payload is valid or not
-=======
-'''
-
->>>>>>> 5830c2198c627f5e292e6e271765a050192a8ba2
 def validObject(Object):
     if("city" in Object and "package" in Object and "price" in Object):
         return True
@@ -162,5 +152,4 @@ def get_city_package(city):
 
     return jsonify(return_value1, return_value )
 
-  if __name__ == '__main__':
-  app.run()
+app.run(port=5000, debug=True)
